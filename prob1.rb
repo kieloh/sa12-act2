@@ -3,6 +3,7 @@ require 'json'
 
 def repos
   response = HTTParty.get('https://api.github.com/users/kieloh/repos')
+  #puts response.code
   JSON.parse(response.body)
 end
 
